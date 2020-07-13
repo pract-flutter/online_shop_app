@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/Product.dart';
+import 'package:online_shop_app/screens/details/components/cart_counter.dart';
 import 'package:online_shop_app/screens/details/components/color_and_size.dart';
 import 'package:online_shop_app/screens/details/components/description.dart';
 import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
@@ -39,7 +40,8 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
-                      Description(product: product)
+                      Description(product: product),
+                      CartCounter(),
                     ],
                   ),
                 ),
