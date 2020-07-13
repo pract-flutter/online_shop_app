@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/Product.dart';
+import 'package:online_shop_app/screens/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -14,6 +15,9 @@ class DetailsScreen extends StatelessWidget {
       // each product have a color
       backgroundColor: product.color,
       appBar: buildAppBar(context),
+      body: Body(
+        product: product,
+      ),
     );
   }
 
