@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/Product.dart';
+import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
 
 class Body extends StatelessWidget {
   final Product product;
@@ -31,24 +32,7 @@ class Body extends StatelessWidget {
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Aristocratic Hand bag",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        product.title,
-                        style: Theme.of(context).textTheme.headline4.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ],
-                  ),
+                  child: ProductTitleWithImage(product: product),
                 ),
               ],
             ),
