@@ -56,11 +56,7 @@ class Body extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  child: ProductTitleWithImage(product: product),
-                ),
+                ProductTitleWithImage(product: product),
               ],
             ),
           ),
